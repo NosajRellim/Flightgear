@@ -1,0 +1,1 @@
+fgfs --enable-fullscreen --enable-fuel-freeze --prop:/sim/view/config/heading-offset-deg=270 --fov=120 --prop:/sim/view/config/pitch-offset-deg=-20 --airport=KJYO --runway=17 --aircraft=c172p --native-fdm=socket,in,30,,5500,udp --native-ctrls=socket,in,30,,5501,udp --fdm=null

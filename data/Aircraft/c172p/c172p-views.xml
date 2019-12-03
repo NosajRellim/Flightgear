@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    <!-- Position the pilot viewpoint and angle -->
+    <view n="0">
+        <name>First View</name>
+        <type>lookfrom</type>
+        <internal type="bool" archive="y">true</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <x-offset-m type="double">0.000</x-offset-m>
+            <y-offset-m type="double">0.201</y-offset-m>
+            <z-offset-m type="double">0.204</z-offset-m>
+            <pitch-offset-deg type="double">-25</pitch-offset-deg>
+            <default-field-of-view-deg>80.3</default-field-of-view-deg>
+            <field-of-view-deg>80.3</field-of-view-deg>
+            <limits>
+                <enabled type="bool">true</enabled>
+                <left>
+                    <heading-max-deg type="double">180</heading-max-deg>
+                    <x-offset-max-m type="double">0.15</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                </left>
+                <right>
+                    <heading-max-deg type="double">180</heading-max-deg>
+                    <x-offset-max-m type="double">0.15</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                </right>
+            </limits>
+        </config>
+    </view>
+
+    <!-- Front and Center VFR Training -->
+    <view n="1">
+        <name>VFR View</name>
+        <type>lookfrom</type>
+        <internal type="bool">true</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <x-offset-m type="double">0.000</x-offset-m>
+            <y-offset-m type="double">0.201</y-offset-m>
+            <z-offset-m type="double">0.204</z-offset-m>
+            <pitch-offset-deg type="double">-12.0</pitch-offset-deg>
+            <default-field-of-view-deg>80.3</default-field-of-view-deg>
+            <field-of-view-deg>80.3</field-of-view-deg>
+            <limits>
+                <enabled type="bool">true</enabled>
+                <left>
+                    <heading-max-deg type="double">180</heading-max-deg>
+                    <x-offset-max-m type="double">0.15</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                </left>
+                <right>
+                    <heading-max-deg type="double">180</heading-max-deg>
+                    <x-offset-max-m type="double">0.15</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                </right>
+            </limits>
+        </config>
+    </view>
+
+    <current-view>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <x-offset-m type="double">0.000</x-offset-m>
+        <y-offset-m type="double">0.201</y-offset-m>
+        <z-offset-m type="double">0.204</z-offset-m>
+        <pitch-offset-deg type="double">-10</pitch-offset-deg>
+        <default-field-of-view-deg>80.3</default-field-of-view-deg>
+        <limits>
+            <enabled type="bool">true</enabled>
+            <left>
+                <heading-max-deg type="double">180</heading-max-deg>
+                <x-offset-max-m type="double">0.15</x-offset-max-m>
+                <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+            </left>
+            <right>
+                <heading-max-deg type="double">180</heading-max-deg>
+                <x-offset-max-m type="double">0.15</x-offset-max-m>
+                <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+            </right>
+        </limits>
+    </current-view>
+
+</PropertyList>

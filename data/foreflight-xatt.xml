@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <comment>
+    Attitude information for ForeFlight or Garmin Pilot.
+
+    Broadcast (or send to specific IP) via UDP on port 49002 at 4-10 Hz:
+
+    --generic=socket,out,10,255.255.255.255,49002,udp,foreflight-xatt
+
+    See https://www.foreflight.com/support/network-gps/
+ </comment>
+  <generic>
+    <output>
+      <line_separator>newline</line_separator>
+      <var_separator>,</var_separator>
+      <chunk>
+        <name>Record type (XATT) and simulator name</name>
+        <format>XATTFlightGear</format>
+      </chunk>
+      <chunk>
+        <name>Heading (degrees true)</name>
+        <type>float</type>
+        <format>%.1f</format>
+        <node>/orientation/heading-deg</node>
+      </chunk>
+      <chunk>
+        <name>Pitch (degrees up)</name>
+        <type>float</type>
+        <format>%.1f</format>
+        <node>/orientation/pitch-deg</node>
+      </chunk>
+      <chunk>
+        <name>Roll (degrees up)</name>
+        <type>float</type>
+        <format>%.1f</format>
+        <node>/orientation/roll-deg</node>
+      </chunk>
+<!-- Position -->
+
+      <chunk>
+        <name>longitude-deg</name>
+        <type>double</type>
+        <format>%.10lf</format>
+        <node>/position/longitude-deg</node>
+      </chunk>
+
+      <chunk>
+        <name>latitude-deg</name>
+        <type>double</type>
+        <format>%.10lf</format>
+        <node>/position/latitude-deg</node>
+      </chunk>
+
+      <chunk>
+        <name>altitude-m</name>
+        <type>float</type>
+        <format>%f</format>
+        <node>/position/altitude-ft</node>
+        <factor>0.3038</factor>
+      </chunk>
+
+      <!-- Velocity and track -->
+      <chunk>
+        <name>track-deg</name>
+        <type>double</type>
+        <format>%f</format>
+        <node>/orientation/track-deg</node>
+      </chunk>
+
+      <chunk>
+        <name>groundspeed-ms</name>
+        <type>double</type>
+        <format>%.1lf</format>
+        <node>/veocities/groundspeed-kt</node>
+        <factor>0.50277</factor>
+      </chunk>
+    </output>
+  </generic>
+</PropertyList>

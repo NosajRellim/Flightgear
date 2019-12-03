@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PropertyList>
+    <menubar>
+      <visibility type="bool">false</visibility>
+    </menubar>
+    <frame-rate-throttle-hz type="double">25</frame-rate-throttle-hz>
+    <draw-mask>
+        <aircraft type="bool">true</aircraft>
+    </draw-mask>
+
+      <!--multithreading-mode>AutomaticSelection</multithreading-mode-->
+      <!--multithreading-mode>SingleThreaded</multithreading-mode-->
+      <!-- multithreading-mode>DrawThreadPerContext</multithreading-mode -->
+    <multithreading-mode>CullDrawThreadPerContext</multithreading-mode>
+      <!--multithreading-mode>CullThreadPerCameraDrawThreadPerContext</multithreading-mode-->
+
+    <camera-group>
+      <window>
+        <name type="string">Wide</name>
+        <host-name type="string">Wide</host-name>
+        <display>0</display>
+        <screen>2</screen>
+        <decoration type = "bool">true</decoration>
+        <width>5760</width>
+        <height>1080</height>
+      </window>
+
+      <gui>
+        <window>
+          <name type="string">Wide</name>
+        </window>
+      </gui>
+
+      <camera>
+        <name type="string">Center</name>
+        <window>
+          <name>Wide</name>
+        </window>
+
+        <view>
+          <heading-deg type = "double">0.0</heading-deg>
+          <roll-deg type = "double">0.0</roll-deg>
+          <pitch-deg type = "double">0.0</pitch-deg>
+        </view>
+
+        <master-perspective>
+          <eye-distance type="double">1.16</eye-distance>
+<!--
+          <x-offset type="double">-0.1</x-offset>
+          <y-offset type="double">+-0.10</y-offset>
+-->
+          <y-offset type="double">+-0.10</y-offset>
+        </master-perspective>
+
+        <viewport>
+          <x>1920</x>
+          <y>0</y>
+          <width>1920</width>
+          <height>1080</height>
+          <fullscreen type = "bool">true</fullscreen>
+        </viewport>
+        <physical-dimensions>
+          <width>1.2065</width>
+          <height>.6795</height>
+          <bezel>
+            <top>0.058</top>
+            <left>0.001</left>
+            <bottom>0.058</bottom>
+            <right>.001</right>
+          </bezel>
+        </physical-dimensions>
+      </camera>
+
+      <camera>
+        <name type="string">Left</name>
+        <window>
+          <name>Wide</name>
+        </window>
+
+        <view>
+          <heading-deg type = "double">90.0</heading-deg>
+          <roll-deg type = "double">0.0</roll-deg>
+          <pitch-deg type = "double">0.0</pitch-deg>
+        </view>
+
+        <left-of-perspective>
+          <parent-camera>Center</parent-camera>
+        </left-of-perspective>
+
+        <viewport>
+          <x>0</x>
+          <y>0</y>
+          <width>1920</width>
+          <height>1080</height>
+          <fullscreen type = "bool">true</fullscreen>
+        </viewport>
+        <physical-dimensions>
+          <width>1.2065</width>
+          <height>.6795</height>
+          <bezel>
+            <top>0.058</top>
+            <left>0.1016</left>
+            <bottom>0.058</bottom>
+            <right>.1016</right>
+          </bezel>
+        </physical-dimensions>
+      </camera>
+
+      <camera>
+        <name type="string">Right</name>
+        <window>
+          <name>Wide</name>
+        </window>
+
+        <view>
+          <heading-deg type = "double">-90.0</heading-deg>
+          <roll-deg type = "double">0.0</roll-deg>
+          <pitch-deg type = "double">0.0</pitch-deg>
+        </view>
+
+        <right-of-perspective>
+          <parent-camera>Center</parent-camera>
+        </right-of-perspective>
+
+        <viewport>
+          <x>3840</x>
+          <y>0</y>
+          <width>1920</width>
+          <height>1080</height>
+        </viewport>
+        <physical-dimensions>
+          <width>1.2065</width>
+          <height>.6795</height>
+          <bezel>
+            <top>0.058</top>
+            <left>0.1016</left>
+            <bottom>0.058</bottom>
+            <right>.1016</right>
+          </bezel>
+        </physical-dimensions>
+      </camera>
+    </camera-group>
+</PropertyList>
